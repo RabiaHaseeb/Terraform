@@ -35,10 +35,10 @@ jobs:
         run: terraform apply -auto-approve
         working-directory: .
 
-        - name: Terraform Apply
-          run: terraform apply -auto-approve
-          working-directory: .
-          env:
+      - name: Terraform Apply
+        run: terraform apply -auto-approve
+        working-directory: .
+        env:
             ARM_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
             ARM_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
             ARM_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
